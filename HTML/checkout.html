@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="/CSS/checkout.css">
+</head>
+
+<body>
+
+    <div class="checkout-container">
+
+        <h1>Checkout</h1>
+
+        <form id="checkoutForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" id="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label>Delivery Address</label>
+                <textarea id="address" required></textarea>
+            </div>
+
+            <div class="order-summary">
+
+                <h3>Total:
+                    <span id="totalPrice">$0</span>
+                </h3>
+
+            </div>
+
+            <button class="place-order-btn">
+                Place Order
+            </button>
+
+
+            <div class="redirect">
+                <a href="/HTML/cart.html">Back to cart page</a>
+            </div>
+        </form>
+
+
+
+    </div>
+
+    <div id="toast"></div>
+
+
+    <script src="/js/checkout.js"></script>
+    <script src="/js/theme.js"></script>
+
+</body>
+
+</html>

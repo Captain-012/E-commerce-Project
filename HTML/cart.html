@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../CSS/dropdown.css">
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo-section">
+
+            <!-- <img src="./collection.png" alt="CCollection Logo"> -->
+
+            <div class="brand">
+                <a href="/index.html">
+                    <h2>CCollection</h2>
+                <span>Luxury Fashion</span></a>
+                
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="/index.html">Home</a>
+
+            <a href="/HTML/product.html">Shop</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <div class="auth-buttons" id="authButtons">
+                <a href="/HTML/login.html">Login</a>
+
+                <a href="/HTML/create.html" class="signup-btn">
+                    Sign Up
+                </a>
+            </div>
+
+            <div class="profile" id="profile">
+                <div class="profile-header" id="profileHeader">
+                    <img id="profileImg" src="" alt="Profile" />
+
+                    <span id="profileEmail"></span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="profile-dropdown" id="profileDropdown">
+                    <p>Signed in as</p>
+
+                    <span id="dropdownEmail"></span>
+
+                    <button id="logoutBtn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <button class="cart-btn" onclick="goToCart()">
+
+                🛒
+
+                <span id="cartCount">0</span>
+
+            </button>
+
+            <button id="themeToggle">
+
+                🌙
+
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#">Home</a>
+
+        <a href="/HTML/product.html">
+            Shop
+        </a>
+
+        <a href="/HTML/login.html">
+            Login
+        </a>
+
+        <a href="/HTML/create.html">
+            Sign Up
+        </a>
+
+    </div>
+
+    <div class="cart-container" id="hero">
+        <a href="/HTML/product.html">← Back to Product Page</a>
+        <h1>Your Cart</h1>
+
+        <div id="cartContainer">
+
+        </div>
+
+        <div class="cart-summary">
+
+            <h2>
+                Total:
+                <span id="total">
+                    $0
+                </span>
+            </h2>
+
+            <button class="checkout-btn" onclick="goToCheckout()">
+                Checkout
+            </button>
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+    <script src="/js/index.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="/js/authState.js"></script>
+    <script src="/js/theme.js"></script>
+</body>
+
+</html>

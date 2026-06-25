@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../CSS/dropdown.css">
+    <link rel="stylesheet" href="../CSS/product.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="logo-section">
+
+            <!-- <img src="./collection.png" alt="CCollection Logo"> -->
+
+            <div class="brand">
+                <a href="/index.html">
+                    <h2>CCollection</h2>
+                </a>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="./product.html">Shop</a>
+
+        </nav>
+
+        <div class="header-actions">
+            <div class="auth-buttons" id="authButtons">
+                <a href="/HTML/login.html" class="">Login</a>
+
+                <a href="/HTML/create.html" class="signup-btn">
+                    Sign Up
+                </a>
+
+            </div>
+
+            <div class="profile" id="profile">
+                <div class="profile-header" id="profileHeader">
+                    <img id="profileImg" src="" alt="Profile" />
+
+                    <span id="profileEmail"></span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="profile-dropdown" id="profileDropdown">
+                    <p>Signed in as</p>
+
+                    <span id="dropdownEmail"></span>
+
+                    <button id="logoutBtn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+
+            <button class="cart-btn" onclick="window.location.href = '/HTML/cart.html'">
+
+                🛒
+
+                <span id="cartCount">0</span>
+
+            </button>
+
+            <button id="themeToggle">
+
+                🌙
+
+
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+
+        </div>
+
+
+
+
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#">Home</a>
+
+        <a href="/HTML/product.html">
+            Shop
+        </a>
+
+        <a href="/HTML/login.html">
+            Login
+        </a>
+
+        <a href="/HTML/create.html">
+            Sign Up
+        </a>
+
+    </div>
+
+
+
+
+    <div class="container" id="hero">
+        <div class="page-header">
+            <h1 class="display-6 fw-bold">Discover Luxury Fashion</h1>
+            <p class="text-secondary mb-0">
+                Explore premium collections
+                crafted for modern style.</p>
+        </div>
+
+        <div class="input-wrapper">
+            <input type="text" id="searchInput" placeholder="Search products..." class="form-control mb-3">
+            <select id="categoryFilter">
+                <option value="all">All Products</option>
+                <option value="mens-shirts">Men's Shirts</option>
+                <option value="mens-shoes">Men's Shoes</option>
+                <option value="mens-watches">Men's Watches</option>
+                <option value="sunglasses">Sunglasses</option>
+            </select>
+        </div>
+
+        <div id="spinner">
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <p>Fetching products.........</p>
+
+            </button>
+        </div>
+
+
+
+
+
+
+
+        <div id="display"></div>
+
+        <div id="toast"></div>
+
+
+    </div>
+    <script src="/js/index.js"></script>
+    <script type="module" src="../js/product.js"></script>
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/authState.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+
+</html>

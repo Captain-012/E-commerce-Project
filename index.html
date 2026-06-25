@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./CSS/dropdown.css">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="brand">
+            <h2>CCollection</h2>
+            <span>Luxury Fashion</span>
+        </div>
+
+        <nav>
+
+            <a href="#">Home</a>
+
+            <a href="/HTML/product.html">Shop</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <div class="auth-buttons" id="authButtons" >
+                <a href="/HTML/login.html">Login</a>
+
+                <a href="/HTML/create.html" class="signup-btn">
+                    Sign Up
+                </a>
+            </div>
+
+            <div class="profile" id="profile">
+                <div class="profile-header" id="profileHeader">
+                    <img id="profileImg" src="" alt="Profile" />
+
+                    <span id="profileEmail"></span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="profile-dropdown" id="profileDropdown">
+                    <p>Signed in as</p>
+
+                    <span id="dropdownEmail"></span>
+
+                    <button id="logoutBtn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+
+
+            <button class="cart-btn" onclick="goToCart()">
+
+                🛒
+
+                <span id="cartCount">0</span>
+
+            </button>
+
+            <button id="themeToggle">
+
+                🌙
+
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+
+        </div>  
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#">Home</a>
+
+        <a href="/HTML/product.html">
+            Shop
+        </a>
+
+        <a href="/HTML/login.html">
+            Login
+        </a>
+
+        <a href="/HTML/create.html">
+            Sign Up
+        </a>
+
+    </div>
+
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="hero-badge">✨ Welcome to CCollection</span>
+            <h1>Discover Luxury Fashion <span>For Every Occassion</span></h1>
+            <p>Explore premium collections crafted for modern style.
+                Shop elegant clothing designed to make you feel
+                confident and stylish.</p>
+
+            <div class="hero-buttons">
+
+                <a href="./HTML/product.html" class="shop-btn">Shop Now</a>
+                <a href="#categories" class="explore-btn"> Explore collection</a>
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <h3>10K+</h3>
+                    <p>Happy Customer</p>
+                </div>
+
+                <div>
+                    <h3>100+</h3>
+                    <p>Luxury Products</p>
+                </div>
+
+                <div>
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="hero-image">
+            <div class="glow"></div>
+            <img src="/collection.png" alt="" width="200px">
+
+            <div class="discount-card">
+                <h2>50% OFF</h2>
+                <p>on your first order </p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div id="toast"></div>
+    <script src="/js/theme.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/authState.js"></script>
+</body>
+
+
+</html>

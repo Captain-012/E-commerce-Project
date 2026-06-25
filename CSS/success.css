@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: #000;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.success-card {
+    width: 100%;
+    max-width: 550px;
+
+    background: #111;
+    border: 1px solid #d4af37;
+
+    border-radius: 30px;
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 30px
+        rgba(212, 175, 55, .15);
+}
+
+.success-card h2{
+    color: #d4af37;
+}
+
+.check-icon {
+    width: 120px;
+    height: 120px;
+
+    margin: auto;
+    margin-bottom: 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            to right,
+            #d4af37,
+            #f4d06f
+        );
+
+    color: black;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.success-card h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.success-card p {
+    color: #bbb;
+    line-height: 1.7;
+}
+
+.success-card span {
+    color: #d4af37;
+    font-weight: 700;
+}
+
+#orderNumber {
+    color: #d4af37;
+    margin: 30px 0;
+}
+
+.delivery {
+    margin-bottom: 35px;
+}
+
+.success-card button {
+    border: none;
+
+    padding: 18px 35px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            to right,
+            #d4af37,
+            #f4d06f
+        );
+
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.success-card button:hover {
+    transform: translateY(-4px);
+}
