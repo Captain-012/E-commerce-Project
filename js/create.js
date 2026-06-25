@@ -34,7 +34,7 @@ signup.addEventListener("click", async (e) => {
         console.log("Email verified");
 
 
-        window.location.href = "login.html";
+        window.location.href = "./login.html";
 
 
 

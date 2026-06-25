@@ -45,5 +45,5 @@ if(themeToggle){
 }
 
 function goToCart() {
-    window.location.href = "/HTML/cart.html";
+    window.location.href = "./cart.html";
 }
