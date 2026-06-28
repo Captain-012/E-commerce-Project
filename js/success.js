@@ -10,5 +10,5 @@ document.getElementById(
 
 function goHome() {
     window.location.href =
-        "product.html";
+        "./product.html";
 }

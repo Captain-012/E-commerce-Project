@@ -29,7 +29,7 @@ signIn.addEventListener("click", () => {
                 timer: 1500,
                 showConfirmButton: false
             }).then(() => {
-                window.location.href = "./index.html";
+                window.location.href = "../index.html";
             });
 
         })
