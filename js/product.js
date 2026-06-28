@@ -33,6 +33,7 @@ async function getProducts() {
 
 
 
+
 let display = document.getElementById("display");
 const displayProducts = (products) => {
     display.innerHTML = ""

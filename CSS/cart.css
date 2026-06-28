@@ -476,6 +476,14 @@ nav a:hover::after {
 
 
 @media (max-width: 768px) {
+
+     nav a{
+        display: none;
+    }
+
+    .auth-buttons a{
+        display: none;
+    }
     .cart-container {
         width: 95%;
     }
