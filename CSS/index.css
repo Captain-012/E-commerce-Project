@@ -630,6 +630,10 @@ body.dark-theme .discount-card p {
 }
 
 @media (max-width:600px) {
+
+     .profile-dropdown{
+         right: -90px;
+    }
     .profile-header {
         width: 50px;
     }
@@ -652,6 +656,9 @@ body.dark-theme .discount-card p {
 
 
 @media (max-width:480px) {
+     .profile-dropdown{
+         right: -90px;
+    }
     header {
         padding: 12px;
     }
@@ -724,6 +731,10 @@ body.dark-theme .discount-card p {
 
 
 @media (max-width:430px) {
+
+    .profile-dropdown{
+         right: -90px;
+    }
     header {
         display: flex;
         justify-content: space-between;
@@ -807,6 +818,9 @@ body.dark-theme .discount-card p {
 
 
 @media (max-width:310px) {
+     .profile-dropdown{
+         right: -90px;
+    }
     header {
        width: 100%;
     }
@@ -828,6 +842,10 @@ body.dark-theme .discount-card p {
 
 
 @media (max-width:300px) {
+
+     .profile-dropdown{
+         right: -90px;
+    }
 
 
     .hero {
