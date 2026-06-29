@@ -16,6 +16,9 @@ if (menuBtn && mobileMenu) {
   });
 }
 
+function goToCart() {
+  window.location.href = "./cart.html"  
+}
 
 
 

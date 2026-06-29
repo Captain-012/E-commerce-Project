@@ -527,7 +527,8 @@ body.dark-theme .discount-card p {
 
 .mobile-menu{
     top: 75px;
-    padding: 1px;
+    width: 100%;
+ 
 }
 
 
@@ -760,6 +761,7 @@ body.dark-theme .discount-card p {
         align-items: center;
 
     }
+
 
 }
 
