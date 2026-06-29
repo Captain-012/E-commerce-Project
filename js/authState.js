@@ -22,16 +22,19 @@ const dropdownEmail =
 const profileImg =
     document.getElementById("profileImg");
 
-const profileDropdown =
-    document.getElementById("profileDropdown");
+const profileDropdown = document.getElementById("profileDropdown");
+const mobileLogin = document.getElementById("mobileLogin");
+const mobileSignup = document.getElementById("mobileSignup");
+const mobileUser = document.getElementById("mobileUser");
+const mobileEmail = document.getElementById("mobileEmail");
 
-const logoutBtn =
-    document.getElementById("logoutBtn");
 
 onAuthStateChanged(auth, (user) => {
-    if (user) {
-        authButtons.style.display = "none";
 
+    if (user) {
+
+        // Desktop
+        authButtons.style.display = "none";
         profile.style.display = "block";
 
         profileEmail.textContent = user.email;
@@ -39,49 +42,72 @@ onAuthStateChanged(auth, (user) => {
 
         profileImg.src =
             `https://ui-avatars.com/api/?name=${user.email[0]}&background=c9a227&color=fff`;
-    }
-    else {
+
+        // Mobile Menu
+        mobileLogin.style.display = "none";
+        mobileSignup.style.display = "none";
+
+        mobileUser.style.display = "block";
+        mobileEmail.textContent = user.email;
+
+    } else {
+
+        // Desktop
         authButtons.style.display = "flex";
         profile.style.display = "none";
+
+        // Mobile Menu
+        mobileLogin.style.display = "block";
+        mobileSignup.style.display = "block";
+
+        mobileUser.style.display = "none";
     }
+
 });
 profileHeader.addEventListener("click", () => {
     profileDropdown.classList.toggle("show");
 });
 
+const logoutButtons = [
+    document.getElementById("logoutBtn"),
+    document.getElementById("mobileLogout")
+];
+logoutButtons.forEach(button => {
+    if (button) {
+        button.addEventListener("click", logoutUser);
+    }
+});
+
 // Logout
-if (logoutBtn) {
-    logoutBtn.addEventListener("click", async () => {
+async function logoutUser() {
 
-
-        const result = await Swal.fire({
-            title: "Are you sure?",
-            text: "You'll need to sign in again to continue shopping on CCollection.",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#c9a227",
-            cancelButtonColor: "#555",
-            confirmButtonText: "Yes, Logout",
-            cancelButtonText: "No, Stay Here",
-            reverseButtons: true
-        });
-
-        if (result.isConfirmed) {
-            await signOut(auth);
-
-            await Swal.fire({
-                icon: "success",
-                title: "👋 See You Soon!",
-                html: `
-          Thank you for visiting <b>CCollection</b>.<br>
-          You've been signed out securely.
-        `,
-                confirmButtonColor: "#c9a227"
-            });
-
-            window.location.href = "/index.html";
-        }
+    const result = await Swal.fire({
+        title: "Are you sure?",
+        text: "You'll need to sign in again to continue shopping on CCollection.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#c9a227",
+        cancelButtonColor: "#555",
+        confirmButtonText: "Yes, Logout",
+        cancelButtonText: "No, Stay Here",
+        reverseButtons: true
     });
+
+    if (!result.isConfirmed) return;
+
+    await signOut(auth);
+
+    await Swal.fire({
+        icon: "success",
+        title: "👋 See You Soon!",
+        html: `
+            Thank you for visiting <b>CCollection</b>.<br>
+            You've been signed out securely.
+        `,
+        confirmButtonColor: "#c9a227"
+    });
+
+    window.location.href = "../index.html";
 }
 
 

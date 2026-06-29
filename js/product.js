@@ -184,7 +184,7 @@ function showToast(message) {
 }
 
 
- const toggleDesc = (bt) => {
+const toggleDesc = (bt) => {
     // console.log(productDiv);
     let productDiv = bt.closest(".product")
 

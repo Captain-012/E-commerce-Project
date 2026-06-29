@@ -23,7 +23,7 @@ signIn.addEventListener("click", () => {
 
             // Signed in 
             Swal.fire({
-                title: "Welcome Back!",
+                title: "Welcome!",
                 text: "Login Successful",
                 icon: "success",
                 timer: 1500,

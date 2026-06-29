@@ -98,6 +98,28 @@
     word-break: break-word;
 }
 
+.mobile-user{
+    display: none;
+    margin-top: 15px;
+    border-top: 1px solid rgba(212,160,23,.2);
+    padding: 15px 10px;
+}
+
+.mobile-user p{
+    margin-bottom: 12px;
+    color: #d49e17c8;
+    font-weight: 600;
+}
+
+#mobileLogout{
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #d4a017;
+    color: white;
+    cursor: pointer;
+}
 
 .dark-theme .profile-dropdown {
     background: rgba(20, 20, 20, 0.95);
